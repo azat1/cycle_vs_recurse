@@ -1,0 +1,6 @@
+C:\projects6\Cycle_vs_recurse\Cycle_vs_recurse\bin\Debug\Cycle_vs_recurse.exe.config
+C:\projects6\Cycle_vs_recurse\Cycle_vs_recurse\bin\Debug\Cycle_vs_recurse.exe
+C:\projects6\Cycle_vs_recurse\Cycle_vs_recurse\bin\Debug\Cycle_vs_recurse.pdb
+C:\projects6\Cycle_vs_recurse\Cycle_vs_recurse\obj\Debug\Cycle_vs_recurse.csprojResolveAssemblyReference.cache
+C:\projects6\Cycle_vs_recurse\Cycle_vs_recurse\obj\Debug\Cycle_vs_recurse.exe
+C:\projects6\Cycle_vs_recurse\Cycle_vs_recurse\obj\Debug\Cycle_vs_recurse.pdb

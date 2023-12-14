@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Factorial perfomance test</title>
+
+  <meta name="description" content="">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <p>JS perfomance test</p>
+  <input type="button" value="Start test" onclick="start_test()"/>
+  <p><div id="result"></div> 
+  <script>
+        function fact_cycle(n) {
+            let Result= 1.0;
+            while (n > 1) {
+                
+                Result= Result * n;
+                n--;
+            }
+
+            return Result;
+        }
+
+        function fact_for(n)
+        {
+            
+            
+            Result= 1.0;
+            for(let i=2;i<=n;i++)
+                    Result= Result * i;
+            return Result;
+        }
+        function fact_for_reversed(n)
+        {
+            
+            
+            Result= 1.0;
+            for(let i=n;i>1;i--)
+                    Result= Result * i;
+            return Result;
+        }
+        function fact_rec(n)
+        {
+
+            if (n == 1)
+                return 1.0; else
+                return n * fact_rec(n - 1);
+        }
+
+    function start_test()
+    {
+	        let buff="";
+	        buff=buff+"<p>"+ "test!";
+            buff=buff+"<p><p>"+"factorial cycle     20=" + fact_cycle(20);
+            buff=buff+"<p>"+"factorial for cycle 20=" + fact_for(20);
+            buff=buff+"<p>"+"factorial recurse   20=" + fact_rec(20);
+
+            let n= 20;
+            let timeStart= Date.now();
+            for (let k = 1; k < 1000000; k++) {
+                
+                  let factorial_c = fact_cycle(n);
+            }
+            timeEnd=Date.now();
+            buff=buff+"<p>"+"Cycle     " + (timeEnd - timeStart);
+
+            timeStart=Date.now();
+            for (let k = 1; k < 1000000; k++)
+            {
+
+                let factorial_c = fact_for(n);
+            }
+            timeEnd=Date.now();
+            buff=buff+"<p>"+"Cycle for " + (timeEnd - timeStart);
+
+            timeStart=Date.now();
+            for (let k = 1; k < 1000000; k++)
+            {
+
+                let factorial_c = fact_for_reversed(n);
+            }
+            timeEnd=Date.now();
+            buff=buff+"<p>"+"Cycle for reversed " + (timeEnd - timeStart);
+
+            timeStart=Date.now();
+            for (let k = 1; k < 1000000; k++)
+            {
+
+                let factorial_c = fact_rec(n);
+            }
+            timeEnd=Date.now();
+            buff=buff+"<p>"+"Recurse   " + (timeEnd - timeStart);
+			document.getElementById("result").innerHTML=buff;
+	       //alert("ffffff!");
+
+    }
+  </script>
+
+</body>
+
+</html>
